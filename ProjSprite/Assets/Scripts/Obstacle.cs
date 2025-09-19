@@ -1,0 +1,50 @@
+using UnityEngine;
+
+public class NewMonoBehaviourScript : MonoBehaviour
+{
+    public float minSize = 0.5f;
+    public float maxSize = 1f;
+
+    public float MaxSpinSpeed = 20f;
+
+    Rigidbody2D rb;
+
+    public float minSpeed = 50f;
+    public float maxSpeed = 100f;
+    public GameObject bounceEffectPrefab;
+
+
+
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        float randomSize = Random.Range(minSize, maxSize);
+        transform.localScale = new Vector3(randomSize, randomSize, 1);
+
+        rb = GetComponent<Rigidbody2D>();
+        rb.AddForce(Vector2.right * 100);
+
+        float randomSpeed = Random.Range(minSpeed, maxSpeed) / randomSize;
+        Vector2 randomDirection = Random.insideUnitCircle;
+        rb.AddForce(randomDirection * randomSpeed);
+
+        float randomSpin = Random.Range(-MaxSpinSpeed, MaxSpinSpeed);
+        rb.AddTorque(randomSpin);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        Vector2 contactPoint = collision.GetContact(0).point; 
+        GameObject bounceEffect = Instantiate(bounceEffectPrefab, contactPoint, Quaternion.identity);
+
+        // Destroy the effect after 1 second
+        Destroy(bounceEffect, 1f);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Instantiate(bounceEffectPrefab, transform.position, transform.rotation);
+
+    }
+}
