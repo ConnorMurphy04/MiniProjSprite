@@ -1,7 +1,7 @@
 # Dont't Melt
 
 ## Play the Game
-**Unity Play Link**: https://play.unity.com/en/games/a88efc48-69a5-4214-af11-112d04ba10ae/sprite-game
+**Unity Play Link**: https://play.unity.com/en/games/3ec104de-25de-4532-a4bb-784990c5aa2a/dont-melt
 
 ## Game Overview
 Play as an ice cream cone trying to avoid the summer sun!
