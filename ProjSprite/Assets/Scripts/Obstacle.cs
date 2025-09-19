@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class Obstacle : MonoBehaviour
 {
     public float minSize = 0.5f;
     public float maxSize = 1f;
@@ -44,7 +44,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Instantiate(bounceEffectPrefab, transform.position, transform.rotation);
 
     }
 }

@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour
         restartButton.style.display = DisplayStyle.Flex;
         borderParent.SetActive(false);
 
-
     }
 
     void ReloadScene() {
