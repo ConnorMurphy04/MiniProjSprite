@@ -1,5 +1,7 @@
 # Dont't Melt
 
+This is a primary version of this game that has not been perfected. Version 2 coming soon.
+
 ## Play the Game
 **Unity Play Link**: https://play.unity.com/en/games/3ec104de-25de-4532-a4bb-784990c5aa2a/dont-melt
 
